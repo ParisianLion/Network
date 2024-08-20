@@ -7,6 +7,7 @@ Created on Sat Aug 17 20:31:22 2024
 
 FileTitle : BuildingData
 """
+
 import pandas as pd
 from datetime import datetime, timedelta
 import os
@@ -99,8 +100,6 @@ def update_individual(file_path):
     print(f"Individual ID {individual_id} updated and saved to {file_path}")
 
 
-
-
 def collect_updated_individual_data():
     updated_data = {}
     
@@ -160,6 +159,9 @@ def create_csv_r(file_path):
     df.to_csv(file_path, index=False)
     print(f"CSV file created and saved to {file_path}")
 
+
+
+
 #CreateConversationCSV
 
 def create_csv_t(file_path):
@@ -171,6 +173,8 @@ def create_csv_t(file_path):
     df = pd.DataFrame(columns=fields)
     df.to_csv(file_path, index=False)
     print(f"CSV file created and saved to {file_path}")
+
+
 
 
 #CollectInformation
@@ -196,6 +200,9 @@ def collect_interaction_data():
     interaction_data['TsinceMet'] = None
     
     return interaction_data
+
+
+
 
 #InsertInteraction
 
@@ -232,6 +239,10 @@ def insert_interaction(file_path):
     
     # Save the updated DataFrame back to the CSV file
     updated_df.to_csv(file_path, index=False)
+
+
+
+#
 
 def update_daily_csv(file_path):
     # Load the entire CSV file into a DataFrame
@@ -288,6 +299,10 @@ def update_daily_csv(file_path):
     # Save the updated DataFrame back to the CSV file
     df.to_csv(file_path, index=False)
     print(f"New row added and saved to {file_path}")
+
+
+
+
 #UpdateConversationsDaily
 
 
